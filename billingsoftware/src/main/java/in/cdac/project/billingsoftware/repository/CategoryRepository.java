@@ -1,6 +1,10 @@
 package in.cdac.project.billingsoftware.repository;
 
+import in.cdac.project.billingsoftware.entity.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Long> {
+   Optional<CategoryEntity> findByCategoryId(String c);
 }
